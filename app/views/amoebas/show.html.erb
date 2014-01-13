@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @amoeba.name %>
+</p>
+
+<p>
+  <b>Generation:</b>
+  <%= @amoeba.generation %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_amoeba_path(@amoeba) %> |
+<%= link_to 'Back', amoebas_path %>

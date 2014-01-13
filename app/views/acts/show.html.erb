@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Act name:</b>
+  <%= @act.act_name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @act.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_act_path(@act) %> |
+<%= link_to 'Back', acts_path %>
