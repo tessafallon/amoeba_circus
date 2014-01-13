@@ -8,7 +8,7 @@ AmoebaCircus::Application.routes.draw do
   get 'talents' => 'talents#index'
   get 'talents/:id' => 'talents#show'
 
-get '/amoebas/split/:id' => 'amoebas#split', :as => 'split_amoeba'
+  get '/amoebas/:id/split' => 'amoebas#split'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

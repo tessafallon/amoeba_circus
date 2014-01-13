@@ -81,9 +81,10 @@ class AmoebasController < ApplicationController
     end
   end
 
-#POST amoebas/split/1
+#GET amoebas/split/1
   def split
-    @amoeba.split!
+    @amoeba = Amoeba.find(params[:id])
+    @amoeba.split
     redirect_to amoebas_path
   end
 end
