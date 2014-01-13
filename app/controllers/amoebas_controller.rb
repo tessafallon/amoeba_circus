@@ -81,14 +81,9 @@ class AmoebasController < ApplicationController
     end
   end
 
+#POST amoebas/split/1
   def split
-    @amoeba = Amoeba.find(params[:id])
-     2.times do |amoeba| Amoeba.new(:name=>"New guy", :generation => @amoeba.generation + 1, :talent_id => @amoeba.talent_id)
-     end
-    @amoeba.destroy
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @amoebas }
-    end
-  end 
+    @amoeba.split!
+    redirect_to amoebas_path
+  end
 end
