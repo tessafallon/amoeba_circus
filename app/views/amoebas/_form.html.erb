@@ -20,8 +20,9 @@
     <%= f.number_field :generation %>
   </div>
   <div class="field">
-    <%= f.label :talent %><br />
-    <%= f.text_field :talent_id %>
+    <%= f.label :talent_id %><br />
+    <%= f.select(:talent_id, Talent.all.map {|t| [t.name]}, :prompt => "Select a talent") %>
+
   </div>
   <div class="actions">
     <%= f.submit %>
