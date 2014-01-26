@@ -13,7 +13,7 @@
   <tr>
     <td><%= amoeba.name %></td>
     <td><%= amoeba.generation %></td>
-    <td><%= amoeba.talent_id %></td>
+    <td><%= amoeba.talents.pluck(:name)[0] %></td>
     <td><%= link_to 'Show', amoeba %></td>
     <td><%= link_to 'Edit', edit_amoeba_path(amoeba) %></td>
     <td><%= link_to 'Destroy', amoeba, confirm: 'Are you sure?', method: :delete %></td>

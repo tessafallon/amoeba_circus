@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :talent_id %><br />
-    <%= f.select(:talent_id, Talent.all.map {|t| [t.name]}, :prompt => "Select a talent") %>
+    <%= f.select(:talent_id, Talent.all.map {|t| [t.name, t.id]}, :prompt => "Select a talent") %>
 
   </div>
   <div class="actions">
